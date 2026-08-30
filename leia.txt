@@ -1,0 +1,1 @@
+E aí, galerinha que dá a bundinha, é o seguinte, vocês vão ter que mexer na pasta chamada source, SRC. E aparentemente vai ser aqueles views que tem aí, que são arquivos .view. Aí vocês vão ter que se virar pra mexer nessa interface aí, pra poder rodar isso aí é npm run dev. Enfim, é só isso aí que eu posso dizer por enquanto, né? Porque eu não gosto de escrever não.
