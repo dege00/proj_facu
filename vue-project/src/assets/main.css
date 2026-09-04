@@ -1,24 +1,20 @@
-@import './base.css';
+@import "./base.css";
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  width: 100%;
+  color: #1a2942;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+body {
+  background-color: #f1f4f8;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.home {
+  min-height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
 }
 
 @media (min-width: 1024px) {
@@ -32,4 +28,159 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+.header p {
+  margin: 8px 0;
+}
+
+.upload-section {
+  margin-bottom: 15px;
+  width: 450px;
+  text-align: center;
+}
+
+.upload-section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #203558;
+}
+
+.upload-section p {
+  max-width: 400px;
+  margin-bottom: 25px;
+  color: #7c8498;
+  font-size: 15px;
+}
+
+.upload-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #a91824;
+  color: rgb(254, 253, 253);
+  transition: opacity 0.2s;
+  width: 180px;
+  box-shadow: 0 4px 8px rgba(169, 24, 36, 0.22);
+  font-weight: 600;
+}
+
+.upload-button:hover {
+  opacity: 0.75;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(169, 24, 36, 0.25);
+}
+
+.drop-area {
+  width: 450px;
+  box-sizing: border-box;
+  border: 2px dashed #c5ccd5;
+  padding: 65px 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.drop-area p {
+  margin: 0;
+}
+
+.drop-area--ativo {
+  border-color: #a91824;
+  background-color: #16345c;
+}
+
+.header img {
+  width: 250px;
+}
+
+input[type="file"] {
+  display: none !important;
+}
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.pdf-icon {
+  width: 72px;
+  height: 72px;
+  background-color: #142644;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pdf-icon::before {
+  content: "PDF";
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.drop-text {
+  color: #1a2942;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.drop-description {
+  color: #667085;
+  font-size: 14px;
+  margin: 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 40px;
+  background-color: #0f2542;
+}
+
+.topbar-logo {
+  width: 50px;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.topbar p {
+  font-size: 14px;
+  color: #a8b8cc;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.upload-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.selected-file {
+  color: #1a2942;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #f1f4f8;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 5px;
 }
