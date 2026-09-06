@@ -12,6 +12,7 @@ export async function extrairImagensPDF(file) {
   }).promise;
 
   let contador = 0;
+  const imagens = [];
 
   for (let pagina = 1; pagina <= pdf.numPages; pagina++) {
     const page = await pdf.getPage(pagina);
@@ -61,6 +62,13 @@ export async function extrairImagensPDF(file) {
         continue;
       }
 
+    
+      imagens.push({
+        blob: png,
+        pagina: pagina,
+        tamanho: png.size,
+      });
+
       contador++;
 
       zip.file(
@@ -78,14 +86,5 @@ export async function extrairImagensPDF(file) {
     type: "blob",
   });
 
-  const url = URL.createObjectURL(zipBlob);
-
-  const link = document.createElement("a");
-
-  link.href = url;
-  link.download = "imagens-do-pdf.zip";
-
-  link.click();
-
-  URL.revokeObjectURL(url);
+  return imagens;
 }

@@ -15,19 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+  flex-direction: column;
 }
 
 .header p {
@@ -58,7 +46,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #a91824;
   color: rgb(254, 253, 253);
   transition: opacity 0.2s;
@@ -125,10 +113,12 @@ input[type="file"] {
 }
 
 .pdf-icon::before {
-  content: "PDF";
+  content: "▤";
   color: #ffffff;
-  font-size: 14px;
+  font-size: 38px;
   font-weight: 700;
+  line-height: 1;
+  transform: translateY(-2px);
 }
 
 .drop-text {
@@ -152,7 +142,7 @@ input[type="file"] {
   background-color: #0f2542;
 }
 
-.topbar-logo {
+.logo {
   width: 50px;
 }
 
@@ -171,7 +161,7 @@ input[type="file"] {
 }
 
 .upload-button:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: not-allowed;
 }
 
