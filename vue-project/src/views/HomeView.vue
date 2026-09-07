@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import logo from "../assets/logo do projeto.png";
 import Resultados from "../components/Resultados.vue";
-import { extrairImagensPDF } from "../services/extrair.js";
+import { extrairImagensPDF } from "../../backend/extrair.js";
 
 // Arquivo
 const arquivoSelecionado = ref(null);
